@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Candal&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Candal", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+
+.slick-dots {
+  position: relative !important;
+  bottom: -25px !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+/* li.slick-active {
+  background-color: #ffd84d !important;
+  border-radius: 50px !important;
+  border-width: 0px !important;
+  border: #ffd84d !important;
+}
+.slick-slider.md\:px-16.slick-initialized {
+  padding: 35px !important;
+  align-items: center !important;
+  margin: 44px !important;
+}
+
+.border-gray-400 {
+    --tw-border-opacity: 1;
+    border-color: rgba(0, 0, 0, 0.158) !important;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

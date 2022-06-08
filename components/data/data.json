@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name" : "Fact 4",
+    "icon" : "/public/Polygon-4.svg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices feugiat etiam ullamcorper viverra. Augue diam elementum viverra turpis et mi senectus lacus"
+  },
+  {
+    "id": 2,
+    "name" : "Fact 3",
+    "icon" : "/public/Polygon-3.svg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices feugiat etiam ullamcorper viverra. Augue diam elementum viverra turpis et mi senectus lacus"
+  },
+  {
+    "id": 3,
+    "name" : "Fact 2",
+    "icon" : "/public/Polygon-2.svg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices feugiat etiam ullamcorper viverra. Augue diam elementum viverra turpis et mi senectus lacus"
+  },
+  {
+    "id": 4,
+    "name" : "Fact 1",
+    "icon" : "/public/Polygon.svg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices feugiat etiam ullamcorper viverra. Augue diam elementum viverra turpis et mi senectus lacus"
+  }
+]
