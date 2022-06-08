@@ -33,6 +33,7 @@ const Navbar = ({ current, setCurrent }) => {
               <div className="flex-shrink-0 flex items-center md:items-start cursor-pointer">
                 <Link href="/" passHref>
                   <Image
+                    onClick={() => setCurrent('/')}
                     className="block lg:hidden w-auto"
                     src={MainLogo}
                     alt="Workflow"
