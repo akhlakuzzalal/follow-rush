@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { CgMenuRightAlt } from 'react-icons/cg';
 import MainLogo from '../public/mainlogo.svg';
+import CheckOutsideClick from './context/CheckOutsideClick';
 
 const Navbar = ({ current, setCurrent }) => {
   const navigation = [
@@ -19,6 +20,9 @@ const Navbar = ({ current, setCurrent }) => {
   }
 
   const [isOpen, setIsOpen] = useState(false);
+  const handleClose = () => {
+    setIsOpen(false);
+  };
   return (
     <Disclosure as="nav">
       {/* {({ open }) => ( */}
@@ -80,31 +84,33 @@ const Navbar = ({ current, setCurrent }) => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden fixed inset-x-0 z-50 bg-white pt-0">
-            <div className="px-2 pt-2 pb-4 space-y-1 text-center">
-              {navigation.map((item) => (
-                <div
-                  key={item?.name}
-                  onClick={() => {
-                    setCurrent(item?.href);
-                    setIsOpen(false);
-                  }}
-                >
-                  <button
-                    className={classNames(
-                      item.href === current
-                        ? 'text-[#000000] border-b-4 border-[#FFCE1E] w-3/12 mx-auto font-bold'
-                        : 'text-[#1E1E1E] w-3/12 mx-auto',
-                      'block py-[12px] font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
+          <CheckOutsideClick onClickOutside={handleClose}>
+            <div className="md:hidden fixed inset-x-0 z-50 bg-white pt-0">
+              <div className="px-2 pt-2 pb-4 space-y-1 text-center">
+                {navigation.map((item) => (
+                  <div
+                    key={item?.name}
+                    onClick={() => {
+                      setCurrent(item?.href);
+                      setIsOpen(false);
+                    }}
                   >
-                    <Link href={item?.href}>{item.name}</Link>
-                  </button>
-                </div>
-              ))}
+                    <button
+                      className={classNames(
+                        item.href === current
+                          ? 'text-[#000000] border-b-4 border-[#FFCE1E] w-3/12 mx-auto font-bold'
+                          : 'text-[#1E1E1E] w-3/12 mx-auto',
+                        'block py-[12px] font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      <Link href={item?.href}>{item.name}</Link>
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </CheckOutsideClick>
         )}
       </>
       {/* )} */}
